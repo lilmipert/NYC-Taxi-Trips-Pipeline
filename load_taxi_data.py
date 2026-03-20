@@ -18,7 +18,7 @@ def load_taxi_data(**context):
 
     # 3. Copy ไฟล์
     if transform_path and os.path.exists(transform_path):
-        shutil.copy(source=transform_path, destination=target_file)
+        shutil.copy(transform_path, target_file)
         logger.info(f"Successfully Loaded data to {target_file}")
     else:
         raise FileNotFoundError("Transformed file not found!")

@@ -11,7 +11,7 @@ def ingest_taxi_data(**kwargs):
 
     for attempt in range(3):
         try:
-            response = requests.get(url, stream=True, timeout=30)
+            response = requests.get(url, stream=True, timeout=300)
             response.raise_for_status()
 
             with open(output_path, "wb") as f:
